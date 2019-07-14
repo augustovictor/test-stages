@@ -33,7 +33,6 @@ tasks.withType<KotlinCompile> {
 tasks.test {
 	useJUnit {
 		includeCategories("augustovictor.com.github.teststages.UnitTest")
-		excludeCategories("augustovictor.com.github.teststages.IntegrationTest")
 	}
 
 	testLogging {
@@ -45,7 +44,6 @@ task<Test>("integration") {
 	dependsOn(tasks.test)
 	useJUnit {
 		includeCategories("augustovictor.com.github.teststages.IntegrationTest")
-		excludeCategories("augustovictor.com.github.teststages.UnitTest")
 	}
 
 	testLogging {
