@@ -40,3 +40,14 @@ tasks.test {
 		events("PASSED", "FAILED", "SKIPPED")
 	}
 }
+
+task<Test>("integration") {
+	useJUnit {
+		includeCategories("augustovictor.com.github.teststages.IntegrationTest")
+		excludeCategories("augustovictor.com.github.teststages.UnitTest")
+	}
+
+	testLogging {
+		events("PASSED", "FAILED", "SKIPPED")
+	}
+}
