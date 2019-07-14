@@ -42,6 +42,7 @@ tasks.test {
 }
 
 task<Test>("integration") {
+	dependsOn(tasks.test)
 	useJUnit {
 		includeCategories("augustovictor.com.github.teststages.IntegrationTest")
 		excludeCategories("augustovictor.com.github.teststages.UnitTest")
