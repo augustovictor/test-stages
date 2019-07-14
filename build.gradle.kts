@@ -31,6 +31,7 @@ tasks.withType<KotlinCompile> {
 }
 
 tasks.test {
+	failFast = true
 	useJUnit {
 		includeCategories("augustovictor.com.github.teststages.UnitTest")
 	}
@@ -41,7 +42,9 @@ tasks.test {
 }
 
 task<Test>("integration") {
+	failFast = true
 	dependsOn(tasks.test)
+
 	useJUnit {
 		includeCategories("augustovictor.com.github.teststages.IntegrationTest")
 	}
