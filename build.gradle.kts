@@ -22,6 +22,7 @@ dependencies {
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+	implementation("org.flywaydb:flyway-core")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	runtimeOnly("org.postgresql:postgresql")
 	compile("postgresql:postgresql9.0-801.jdbc4")
