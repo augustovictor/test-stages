@@ -3,8 +3,8 @@ CREATE TABLE movies(
     title VARCHAR(100) NOT NULL
 );
 
-INSERT INTO movies('Movie 1');
-INSERT INTO movies('Movie 2');
-INSERT INTO movies('Movie 3');
-INSERT INTO movies('Movie 4');
-INSERT INTO movies('Movie 5');
+INSERT INTO movies VALUES('Movie 1');
+INSERT INTO movies VALUES('Movie 2');
+INSERT INTO movies VALUES('Movie 3');
+INSERT INTO movies VALUES('Movie 4');
+INSERT INTO movies VALUES('Movie 5');
