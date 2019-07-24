@@ -21,7 +21,7 @@ class MovieIntegrationTestWithDB {
 
     @Test
     fun `should insert data to the movies table`() {
-        val movie = entityManager.persist(Movie(title = "Movie inserted with entityManager"))
+        entityManager.persist(Movie(title = "Movie inserted with entityManager"))
 
         val persistedMovie = entityManager.find(Movie::class.java, 1L)
 
