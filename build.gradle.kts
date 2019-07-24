@@ -47,6 +47,8 @@ tasks.test {
 }
 
 task<Test>("context-load") {
+	failFast = true
+
 	useJUnit {
 		includeCategories("augustovictor.com.github.teststages.ContextLoad")
 	}
