@@ -25,7 +25,7 @@ dependencies {
 	implementation("org.flywaydb:flyway-core")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	runtimeOnly("org.postgresql:postgresql")
-	compile("postgresql:postgresql9.0-801.jdbc4")
+	compile("org.postgresql:postgresql:42.1.4")
 	testCompile("org.testcontainers:postgresql:1.11.3")
 }
 
@@ -37,7 +37,6 @@ tasks.withType<KotlinCompile> {
 }
 
 tasks.test {
-	failFast = true
 	useJUnit {
 		includeCategories("augustovictor.com.github.teststages.UnitTest")
 	}
@@ -48,7 +47,6 @@ tasks.test {
 }
 
 task<Test>("integration") {
-	failFast = true
 	dependsOn(tasks.test)
 
 	useJUnit {
