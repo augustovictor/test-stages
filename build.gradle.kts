@@ -46,6 +46,28 @@ tasks.test {
 	}
 }
 
+task<Test>("context-load") {
+	useJUnit {
+		includeCategories("augustovictor.com.github.teststages.ContextLoad")
+	}
+
+	testLogging {
+		events("PASSED", "FAILED", "SKIPPED")
+	}
+}
+
+task<Test>("database-test") {
+	dependsOn(tasks.getByName("context-load"))
+
+	useJUnit {
+		includeCategories("augustovictor.com.github.teststages.DatabaseTest")
+	}
+
+	testLogging {
+		events("PASSED", "FAILED", "SKIPPED")
+	}
+}
+
 task<Test>("integration") {
 	dependsOn(tasks.test)
 
